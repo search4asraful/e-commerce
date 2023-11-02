@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap");
+:root {
+  --primary-color: #00973f;
+  --normal-text: #465b52;
+  --secondary-color: #dfdfdf;
+  --pureWhite-color: #fff;
+  --lightBlack-color: #222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 6.4rem;
+  color: var(--lightBlack-color);
+}
+
+h2 {
+  font-size: 4.6rem;
+  line-height: 5.4rem;
+  color: var(--lightBlack-color);
+}
+
+h4 {
+  font-size: 2rem;
+  color: var(--lightBlack-color);
+}
+
+h6 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.6rem;
+  color: var(--normal-text);
+}
+
+body {
+  width: 100%;
+}
+
+/* Header */
+
+#header {
+  align-items: center;
+  background-color: #d8fff7;
+  box-shadow: 0 0 5xp rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+  width: 100%;
+}
+.brandLogo img {
+  width: 10rem;
+}
+#header button {
+  order: 2;
+  display: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+#header i {
+  font-size: 2.5rem;
+}
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--lightBlack-color);
+  transition: all 0.5s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: var(--primary-color);
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  align-items: flex-start;
+  background-color: var(--primary-color);
+  bottom: -4px;
+  content: "";
+  display: flex;
+  flex-direction: column;
+  height: 2px;
+  justify-content: center;
+  left: 20px;
+  position: absolute;
+  width: 30%;
+}
+
+/* home Page (hero) */
+#hero {
+  align-items: center;
+  background-image: url("../img/banner/b4.jpg");
+  background-size: cover;
+  background-position: inherit;
+  display: flex;
+  height: 70vh;
+  padding: 0 6%;
+  width: 100%;
+}
+#hero button {
+  margin-top: 1rem;
+}
+.btn {
+  padding: 10px 25px;
+  border: transparent;
+  cursor: pointer;
+}
+.btnPrimary {
+  font-size: 1.6rem;
+  border-radius: 5px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.btnPrimary:hover {
+  color: var(--pureWhite-color);
+  background-color: #088178;
+}
+.btnSecondary {
+  font-size: 1.6rem;
+  border-radius: 5px;
+  color: var(--lightBlack-color);
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease;
+}
+.btnSecondary:hover {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+/* Shop Page */
+#shop > h2 {
+  text-align: center;
+  margin: 1.6rem auto;
+  white-space: nowrap;
+  font-size: 2.5rem;
+  color: var(--lightBlack-color);
+  border-bottom: 3px solid #088178;
+  width: 50%;
+}
+.shopContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.shopItem {
+  margin: 2rem auto;
+  background-color: #384e58;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: auto;
+  max-width: max-content;
+  overflow: hidden;
+  width: 350px;
+  height: auto;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.itemContent h2 {
+  color: var(--pureWhite-color);
+  font-size: 2.5rem;
+  font-weight: 600;
+  position: relative;
+  white-space: nowrap;
+}
+.badge {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 5px;
+  color: var(--pureWhite-color);
+  display: inline-flex;
+  font-size: 1.2rem;
+  font-weight: 600;
+  height: 30px;
+  justify-content: center;
+  padding: 5px 10px;
+  position: absolute;
+  right: 20px;
+  top: -50px;
+}
+.badgeNew {
+  background-color: red;
+}
+.badgePupolar {
+  background-color: var(--primary-color);
+}
+.badgeUntaged {
+  background-color: steelblue;
+}
+.itemContent img {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.itemContent p {
+  margin: 0;
+  padding-bottom: 1.4rem;
+  font-size: 1.6rem;
+  color: var(--pureWhite-color);
+}
+.itemContent p span {
+  color: wheat;
+  font-size: 1.2rem;
+  text-decoration: line-through;
+}
+.itemBtn {
+  display: flex;
+  justify-content: space-evenly;
+}
+.learnMore {
+  padding: 1rem 2.5rem;
+  background-color: var(--secondary-color);
+  font-size: 1.5rem;
+  color: var(--lightBlack-color);
+  text-decoration: none;
+  border-radius: 5px;
+}
+/* Single Product */
+
+/* Blog Page */
+
+/* About Page */
+
+/* Contact Page */
+.contactArea {
+  background-color: var(--lightBlack-color);
+  padding: 2rem 0;
+  overflow: hidden;
+}
+.contactFrom {
+  padding: 0 2rem;
+  width: 50%;
+  border: 1px solid var(--pureWhite-color);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  border-radius: 10px;
+}
+.contactHeading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.contactHeading h2 {
+  color: var(--pureWhite-color);
+  font-size: 2rem;
+}
+.contactHeading p {
+  color: wheat;
+  font-size: 1.6rem;
+}
+.contactFrom form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+}
+.contactFrom label {
+  font-size: 1.8rem;
+  color: white;
+}
+.contactFrom input {
+  align-items: center;
+  min-width: 50%;
+  margin-bottom: 1rem;
+  padding: 8px;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid var(--pureWhite-color);
+  border-radius: 5px;
+  font-size: 2rem;
+  color: var(--pureWhite-color);
+}
+.contactFrom button {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+/* Footer page */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: var(--secondary-color);
+}
+footer p {
+  padding: 1rem;
+  text-align: center;
+}
+footer a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--normal-text);
+}
+
+@media screen and (max-width: 660px) {
+  #header {
+    padding: 1rem 2.5rem;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  #navbar {
+    background-color: #e3e6f3;
+    width: 100%;
+    gap: 3rem;
+    top: 75px;
+    position: fixed;
+    justify-content: start;
+    padding-top: 2.5rem;
+    flex-direction: column;
+    height: 100vh;
+    right: -100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: right 0.5s ease;
+    z-index: 999;
+  }
+  #header button {
+    display: block;
+  }
+  #navbar.show {
+    visibility: visible;
+    opacity: 1;
+    right: 0%;
+  }
+  .itemContent h2 {
+    font-size: 1.6rem;
+  }
+  .contactHeading p {
+    font-size: 1.4rem;
+  }
+  .contactFrom {
+    min-width: 90%;
+  }
+  .contactFrom label {
+    font-size: 1.6rem;
+  }
+  .contactFrom input {
+    font-size: 1.6rem;
+  }
+}
