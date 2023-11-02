@@ -329,6 +329,12 @@ footer a {
     flex-wrap: wrap;
     position: relative;
   }
+  #navbar li {
+    margin-top: 2rem;
+  }
+  #navbar li a{
+    font-size: 2rem;
+  }
   #navbar {
     background-color: #e3e6f3;
     width: 100%;
