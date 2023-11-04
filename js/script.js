@@ -1,4 +1,4 @@
+let element = document.getElementById("navbar");
 function showHide(){
-    let element = document.getElementById("navbar")
-    element.classList.toggle("show")
+    element.classList.toggle("show");
 }

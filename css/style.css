@@ -16,14 +16,14 @@
 }
 
 h1 {
+  line-height: 5rem;
   font-size: 5rem;
-  line-height: 6.4rem;
   color: var(--lightBlack-color);
 }
 
 h2 {
-  font-size: 4.6rem;
-  line-height: 5.4rem;
+  line-height: 4rem;
+  font-size: 4rem;
   color: var(--lightBlack-color);
 }
 
@@ -45,20 +45,23 @@ p {
 body {
   width: 100%;
 }
-
-/* Header */
-
+section#header {
+  position: sticky;
+  top: 0;
+}
 #header {
+  box-shadow: 0 0 5px rgb(124, 124, 124);
   align-items: center;
-  background-color: #d8fff7;
-  box-shadow: 0 0 5xp rgb(0, 0, 0);
+  background-color: #E3E6F3;
   display: flex;
+  height: 60px;
   justify-content: space-between;
-  padding: 20px 80px;
+  padding: 0 60px;
   width: 100%;
+  z-index: 9999;
 }
 .brandLogo img {
-  width: 10rem;
+  width: 7rem;
 }
 #header button {
   order: 2;
@@ -68,7 +71,7 @@ body {
   background-color: transparent;
 }
 #header i {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 #navbar {
   display: flex;
@@ -78,11 +81,12 @@ body {
 
 #navbar li {
   list-style: none;
-  padding: 0 20px;
   position: relative;
 }
 
 #navbar li a {
+  padding-right: 20px;
+  white-space: nowrap;
   text-decoration: none;
   font-size: 1.6rem;
   font-weight: 600;
@@ -105,7 +109,7 @@ body {
   flex-direction: column;
   height: 2px;
   justify-content: center;
-  left: 20px;
+  left: 0;
   position: absolute;
   width: 30%;
 }
@@ -120,30 +124,29 @@ body {
   height: 70vh;
   padding: 0 6%;
   width: 100%;
+  line-height: 5rem;
 }
 #hero button {
   margin-top: 1rem;
 }
 .btn {
-  padding: 10px 25px;
+  padding: 1rem 1.6rem;
   border: transparent;
   cursor: pointer;
+  white-space: nowrap;
+  font-size: 1.3rem;
+  border-radius: 5px;
 }
 .btnPrimary {
-  font-size: 1.6rem;
-  border-radius: 5px;
   color: var(--secondary-color);
   background-color: var(--primary-color);
   transition: all 0.3s ease;
 }
-
 .btnPrimary:hover {
   color: var(--pureWhite-color);
   background-color: #088178;
 }
 .btnSecondary {
-  font-size: 1.6rem;
-  border-radius: 5px;
   color: var(--lightBlack-color);
   background-color: var(--secondary-color);
   transition: all 0.3s ease;
@@ -153,6 +156,10 @@ body {
   background-color: var(--secondary-color);
 }
 /* Shop Page */
+#shop {
+  width: 90%;
+  margin: auto;
+}
 #shop > h2 {
   text-align: center;
   margin: 1.6rem auto;
@@ -164,9 +171,10 @@ body {
 }
 .shopContent {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   margin-top: 2rem;
   margin-bottom: 2rem;
+  column-gap: 1rem;
 }
 .shopItem {
   margin: 2rem auto;
@@ -178,18 +186,37 @@ body {
   height: auto;
   max-width: max-content;
   overflow: hidden;
-  width: 350px;
+  width: 180px;
   height: auto;
   padding: 1rem;
   margin-bottom: 1rem;
   text-align: center;
+  position: relative;
+}
+.itemContent {
+  height: 285px;
+}
+.imgBox {
+  height: 180px;
+  background-color: var(--pureWhite-color);
 }
 .itemContent h2 {
-  color: var(--pureWhite-color);
-  font-size: 2.5rem;
-  font-weight: 600;
-  position: relative;
+  overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--pureWhite-color);
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  font-weight: 600;
+  line-height: 2rem;
+}
+.itemContent img {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
+  position: relative;
 }
 .badge {
   align-items: center;
@@ -197,30 +224,33 @@ body {
   border-radius: 5px;
   color: var(--pureWhite-color);
   display: inline-flex;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
-  height: 30px;
+  height: 2rem;
+  width: 5rem;
   justify-content: center;
-  padding: 5px 10px;
+  padding: .5rem 1rem;
   position: absolute;
-  right: 20px;
-  top: -50px;
+  right: 16px;
+  top: 165px;
 }
 .badgeNew {
   background-color: red;
 }
+.badgeNew::after {
+  content: 'New';
+}
 .badgePupolar {
   background-color: var(--primary-color);
+}
+.badgePupolar::after {
+  content: 'Popular';
 }
 .badgeUntaged {
   background-color: steelblue;
 }
-.itemContent img {
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-  object-fit: cover;
-  width: 100%;
-  height: auto;
+.badgeUntaged::after {
+  content: 'Untaged';
 }
 .itemContent p {
   margin: 0;
@@ -234,10 +264,13 @@ body {
   text-decoration: line-through;
 }
 .itemBtn {
+  gap: 0 1rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
-.learnMore {
+.seeMore {
+  white-space: nowrap;
+  bottom: 1rem;
   padding: 1rem 2.5rem;
   background-color: var(--secondary-color);
   font-size: 1.5rem;
@@ -253,7 +286,7 @@ body {
 
 /* Contact Page */
 .contactArea {
-  background-color: var(--lightBlack-color);
+  background-color: #E3E6F3;
   padding: 2rem 0;
   overflow: hidden;
 }
@@ -266,6 +299,7 @@ body {
   margin: auto;
   justify-content: center;
   border-radius: 10px;
+  background-image: linear-gradient(120deg, rgb(3, 3, 36), rgb(20, 38, 46)) ;
 }
 .contactHeading {
   text-align: center;
@@ -307,27 +341,43 @@ body {
 }
 /* Footer page */
 footer {
+  box-shadow: 0 0 2px var(--lightBlack-color);
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   background-color: var(--secondary-color);
 }
-footer p {
-  padding: 1rem;
-  text-align: center;
-}
-footer a {
+footer p, footer a {
   font-size: 1.6rem;
+  padding: 1rem 0;
+  text-align: center;
+  color: black;
   text-decoration: none;
-  color: var(--normal-text);
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
 @media screen and (max-width: 660px) {
+  #hero {
+    line-height: 3.6rem;
+  }
+  #hero h1 {
+    font-size: 3rem;
+  }
+  #hero h2 {
+    font-size: 2.4rem;
+  }
+  #hero h4 {
+    font-size: 1.6rem;
+  }
   #header {
+    height: 45px;
     padding: 1rem 2.5rem;
     flex-wrap: wrap;
-    position: relative;
+    border-bottom: 1px solid var(--secondary-color);
   }
   #navbar li {
     margin-top: 2rem;
@@ -336,13 +386,13 @@ footer a {
     font-size: 2rem;
   }
   #navbar {
-    background-color: #e3e6f3;
+    background-color: #bcc0ce;
     width: 100%;
     gap: 3rem;
-    top: 60px;
+    top: 45px;
     position: fixed;
     justify-content: start;
-    padding-top: 2.5rem;
+    padding-top: 2rem;
     flex-direction: column;
     height: 100vh;
     right: -100%;
@@ -373,5 +423,15 @@ footer a {
   }
   .contactFrom input {
     font-size: 1.6rem;
+  }
+  #shop {
+    width: auto;
+  }
+  #shop > h2 {
+    font-size: 2rem;
+    width: 80%;
+  }
+  footer p, footer a {
+    font-size: 1.3rem;
   }
 }
