@@ -287,9 +287,50 @@ section#header {
 /****** Contact Page ********/
 .contactArea {
   background-color: #384E58;
-  padding: 2rem 0;
-  overflow: hidden;
+  padding: 3.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+.contactdetails{
+  margin-left: 200px;
+}
+
+.contactdetails h2{
+  margin-bottom: 30px;
+  color: #D1D1D1;
+}
+
+.contactdetails>i{
+  color: #719aad;
+  font-size: 15px !important;
+  padding-bottom: 20px;
+
+}
+
+.contactdetails span{
+  font-size: 15px;
+  font-weight: bold;
+  color: #7294a3;
+  margin-left: 10px;
+}
+
+.contact_icon{
+margin-top: 10px;
+}
+
+.contact_icon i{
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: #D1D1D1;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.contact_icon i:hover{
+  color: #000;
+}
+
 .contactFrom {
   padding: 0 2rem;
   width: 50%;
@@ -339,10 +380,10 @@ section#header {
   ;
 }
 .contactFrom button {
-  width: 500px;
+  width: 50%;
   margin:auto;
   margin-top: 10px;
-  margin-bottom: 10px;  
+  margin-bottom: 20px;  
   background-color: transparent;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   font-weight:bolder;
@@ -351,23 +392,6 @@ section#header {
 }
 .contactFrom button:hover{
   background-color: #209652;
-}
-
-.contact_icon{
-  display: flex;
-  justify-content: center;
-}
-
-.contact_icon i{
-  cursor: pointer;
-  font-size: 2.5rem;
-  padding: 10px;
-  color: #D1D1D1;
-  margin-bottom: 20px;
-}
-
-.contact_icon i:hover{
-  color: #000;
 }
 
 /****** Contact Page ********/
@@ -448,15 +472,16 @@ footer p, footer a {
   .contactHeading p {
     font-size: 1.4rem;
   }
-  .contactFrom {
-    min-width: 90%;
-  }
   .contactFrom label {
     font-size: 1.6rem;
   }
   .contactFrom input {
     font-size: 1.6rem;
   }
+
+  .contactArea{
+    min-width: 90%;
+  } 
   #shop {
     width: auto;
   }
