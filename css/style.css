@@ -348,7 +348,8 @@ margin-top: 10px;
 }
 .contactHeading h2 {
   color: var(--pureWhite-color);
-  font-size: 2rem;
+  font-size: 3.2rem;
+  padding-top: 15px;
 }
 .contactHeading p {
   color: #7294a3;
