@@ -287,7 +287,38 @@ section#header {
 /* Blog Page */
 
 /* About Page */
-
+#about {
+  width: 90%;
+  margin: auto;
+}
+#about > h2 {
+  text-align: center;
+  margin: 1.6rem auto;
+  white-space: nowrap;
+  font-size: 2.5rem;
+  color: var(--lightBlack-color);
+  border-bottom: 3px solid #088178;
+  width: 50%;
+}
+.about_taital{
+  width: 100%;
+  font-size: 40px;
+  color: #000000;
+  text-align: center;
+  font-weight: bold;
+}
+.about_text{
+  width: 70%;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+.about_img{
+  height: 1000px;
+  width: 1000px;
+}
 /****** Contact Page ********/
 .contactArea {
   align-items: center;
