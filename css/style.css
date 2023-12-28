@@ -146,11 +146,15 @@ section#header {
   color: var(--pureWhite-color);
   background-color: #088178;
 }
+.btnPrimary i{
+  font-size: 10px;
+}
 .btnSecondary {
   color: var(--lightBlack-color);
   background-color: var(--secondary-color);
   transition: all 0.3s ease;
 }
+
 .btnSecondary:hover {
   color: var(--primary-color);
   background-color: var(--secondary-color);
@@ -178,7 +182,7 @@ section#header {
 }
 .shopItem {
   margin: 2rem auto;
-  background-color: #384e58;
+  background-color: #384E58;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -341,6 +345,7 @@ margin-top: 10px;
   justify-content: center;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #ffffff0f;
 }
 .contactHeading {
   text-align: center;
@@ -365,6 +370,7 @@ margin-top: 10px;
 .contactFrom label {
   font-size: 1.8rem;
   color: white;
+  font-weight: bolder;
 }
 .contactFrom input {
   align-items: center;
@@ -375,7 +381,7 @@ margin-top: 10px;
   outline: none;
   border: 1px solid var(--pureWhite-color);
   font-size: 2rem;
-  color: var(--pureWhite-color);
+  color: #7294a3;
   border: none;
   border-bottom: 1px solid #fff;
   ;
