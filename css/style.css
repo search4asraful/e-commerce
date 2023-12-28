@@ -52,7 +52,7 @@ section#header {
 #header {
   box-shadow: 0 0 5px rgb(124, 124, 124);
   align-items: center;
-  background-color: #E3E6F3;
+  background-color: #e3e6f3;
   display: flex;
   height: 60px;
   justify-content: space-between;
@@ -71,7 +71,7 @@ section#header {
   background-color: transparent;
 }
 #header i {
-  font-size: 2rem;
+  font-size: 2.4rem;
 }
 #navbar {
   display: flex;
@@ -229,7 +229,7 @@ section#header {
   height: 2rem;
   width: 5rem;
   justify-content: center;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   position: absolute;
   right: 16px;
   top: 165px;
@@ -238,19 +238,19 @@ section#header {
   background-color: red;
 }
 .badgeNew::after {
-  content: 'New';
+  content: "New";
 }
 .badgePupolar {
   background-color: var(--primary-color);
 }
 .badgePupolar::after {
-  content: 'Popular';
+  content: "Popular";
 }
 .badgeUntaged {
   background-color: steelblue;
 }
 .badgeUntaged::after {
-  content: 'Untaged';
+  content: "Untaged";
 }
 .itemContent p {
   margin: 0;
@@ -286,7 +286,7 @@ section#header {
 
 /* Contact Page */
 .contactArea {
-  background-color: #E3E6F3;
+  background-color: #e3e6f3;
   padding: 2rem 0;
   overflow: hidden;
 }
@@ -299,7 +299,7 @@ section#header {
   margin: auto;
   justify-content: center;
   border-radius: 10px;
-  background-image: linear-gradient(120deg, rgb(3, 3, 36), rgb(20, 38, 46)) ;
+  background-image: linear-gradient(120deg, rgb(3, 3, 36), rgb(20, 38, 46));
 }
 .contactHeading {
   text-align: center;
@@ -349,7 +349,8 @@ footer {
   height: 50px;
   background-color: var(--secondary-color);
 }
-footer p, footer a {
+footer p,
+footer a {
   font-size: 1.6rem;
   padding: 1rem 0;
   text-align: center;
@@ -357,7 +358,7 @@ footer p, footer a {
   text-decoration: none;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 @media screen and (max-width: 660px) {
@@ -382,11 +383,11 @@ footer p, footer a {
   #navbar li {
     margin-top: 2rem;
   }
-  #navbar li a{
+  #navbar li a {
     font-size: 2rem;
   }
   #navbar {
-    background-color: #bcc0ce;
+    background-color: #d5d8e2;
     width: 100%;
     gap: 3rem;
     top: 45px;
@@ -431,7 +432,8 @@ footer p, footer a {
     font-size: 2rem;
     width: 80%;
   }
-  footer p, footer a {
+  footer p,
+  footer a {
     font-size: 1.3rem;
   }
 }
