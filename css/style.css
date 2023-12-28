@@ -288,6 +288,34 @@ section#header {
 /* Blog Page */
 
 /* About Page */
+.about-area h2 {
+  font-size: 2.6rem;
+  padding-bottom: 1rem;
+}
+.about-area {
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.about-img {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.about-img img {
+  border-radius: 25px;
+  width: 100%;
+}
+.about-text {
+  margin: 0 auto;
+  width: 600px;
+  text-align: center;
+}
+.about-text .seeMore {
+  display: inline-block;
+  background-color: limegreen;
+  margin-top: 25px;
+}
 
 /****** Contact Page ********/
 .contactArea {
@@ -514,6 +542,13 @@ footer a {
   #shop > h2 {
     font-size: 2rem;
     width: 80%;
+  }
+  .about-area {
+    flex-direction: column;
+  }
+  .about-text {
+    width: auto;
+    order: -1;
   }
   footer p,
   footer a {
