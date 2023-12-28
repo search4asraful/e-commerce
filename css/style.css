@@ -284,12 +284,55 @@ section#header {
 
 /* About Page */
 
-/* Contact Page */
+/****** Contact Page ********/
 .contactArea {
   background-color: #e3e6f3;
   padding: 2rem 0;
   overflow: hidden;
+  background-color: #384e58;
+  padding: 3.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+.contactdetails {
+  margin-left: 200px;
+}
+
+.contactdetails h2 {
+  margin-bottom: 30px;
+  color: #d1d1d1;
+}
+
+.contactdetails > i {
+  color: #719aad;
+  font-size: 15px !important;
+  padding-bottom: 20px;
+}
+
+.contactdetails span {
+  font-size: 15px;
+  font-weight: bold;
+  color: #7294a3;
+  margin-left: 10px;
+}
+
+.contact_icon {
+  margin-top: 10px;
+}
+
+.contact_icon i {
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: #d1d1d1;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.contact_icon i:hover {
+  color: #000;
+}
+
 .contactFrom {
   padding: 0 2rem;
   width: 50%;
@@ -299,7 +342,8 @@ section#header {
   margin: auto;
   justify-content: center;
   border-radius: 10px;
-  background-image: linear-gradient(120deg, rgb(3, 3, 36), rgb(20, 38, 46));
+  /* background-image: linear-gradient(120deg, rgb(3, 3, 36), rgb(20, 38, 46)); */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .contactHeading {
   text-align: center;
@@ -307,11 +351,13 @@ section#header {
 }
 .contactHeading h2 {
   color: var(--pureWhite-color);
-  font-size: 2rem;
+  font-size: 3.2rem;
+  padding-top: 15px;
 }
 .contactHeading p {
-  color: wheat;
-  font-size: 1.6rem;
+  color: #7294a3;
+  font-size: initial;
+  font-weight: bolder;
 }
 .contactFrom form {
   display: flex;
@@ -331,14 +377,28 @@ section#header {
   background-color: transparent;
   outline: none;
   border: 1px solid var(--pureWhite-color);
-  border-radius: 5px;
   font-size: 2rem;
   color: var(--pureWhite-color);
+  border: none;
+  border-bottom: 1px solid #fff;
 }
 .contactFrom button {
-  width: 100px;
-  margin-bottom: 1rem;
+  width: 50%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-weight: bolder;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
+.contactFrom button:hover {
+  background-color: #209652;
+}
+
+/****** Contact Page ********/
+
 /* Footer page */
 footer {
   box-shadow: 0 0 2px var(--lightBlack-color);
@@ -416,14 +476,15 @@ footer a {
   .contactHeading p {
     font-size: 1.4rem;
   }
-  .contactFrom {
-    min-width: 90%;
-  }
   .contactFrom label {
     font-size: 1.6rem;
   }
   .contactFrom input {
     font-size: 1.6rem;
+  }
+
+  .contactArea {
+    min-width: 90%;
   }
   #shop {
     width: auto;
